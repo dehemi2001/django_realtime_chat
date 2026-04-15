@@ -65,4 +65,7 @@ def get_or_create_chatroom(request, username):
         chatroom.members.add(other_user, request.user)
 
     return redirect('chatroom', chatroom.group_name)
-        
+
+@login_required
+def create_groupchat(request):
+    return render(request, 'a_rtchat/create_groupchat.html')
