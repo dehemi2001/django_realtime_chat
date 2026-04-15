@@ -20,7 +20,7 @@
                 </div>
             </a>
             {% elif chat_group.groupchat_name %}
-            <ul class="flex gap-4">
+            <ul id="groupchat-members" class="flex gap-4">
                 {% for member in chat_group.members.all %}
                 <li>
                     <a href="{% url 'profile' member.username %}"
