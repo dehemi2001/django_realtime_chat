@@ -40,6 +40,7 @@ def chat_view(request, chatroom_name='public-chat'):
         'form': form,
         'other_user': other_user,
         'chatroom_name': chatroom_name,
+        'chat_group': chat_group
     }
 
     return render(request, 'a_rtchat/chat.html', context)
