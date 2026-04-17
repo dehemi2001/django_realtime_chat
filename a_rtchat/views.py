@@ -36,7 +36,8 @@ def chat_view(request, chatroom_name='public-chat'):
             message.save()
             context = {
                 'message': message,
-                'user': request.user
+                'user': request.user,
+                'chat_group': chat_group
             }
             return render(request, 'a_rtchat/partials/chat_message_p.html', context)
 
