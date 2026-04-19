@@ -36,3 +36,10 @@ class GroupMessage(models.Model):
 
     class Meta:
         ordering = ['-created']
+
+    @property
+    def is_image(self):
+        if self.filename.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp')):
+            return True
+        else:
+            return False
