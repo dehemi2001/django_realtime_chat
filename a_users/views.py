@@ -65,6 +65,7 @@ def profile_emailchange(request):
             email_address = EmailAddress.objects.get(user=request.user, email=request.user.email)
             email_address.send_confirmation(request)
             
+            messages.success(request, f"Confirmation email sent to {email_address.email}")
             return redirect('profile-settings')
         else:
             messages.warning(request, 'Form not valid')
@@ -77,6 +78,7 @@ def profile_emailchange(request):
 def profile_emailverify(request):
     email_address = EmailAddress.objects.get(user=request.user, email=request.user.email)
     email_address.send_confirmation(request)
+    messages.success(request, f"Confirmation email sent to {email_address.email}")
     return redirect('profile-settings')
 
 
