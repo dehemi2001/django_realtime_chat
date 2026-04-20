@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     # Third party
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
+    # 'allauth.socialaccount',
     'django_browser_reload',
     'django_htmx',
 ]
