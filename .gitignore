@@ -1,5 +1,6 @@
-.venv/
+venv/
 media/
+migrations/
 __pycache__/
 db.sqlite3
 .env
