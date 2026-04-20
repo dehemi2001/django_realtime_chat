@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'django_cleanup.apps.CleanupConfig',
 
     # My apps
@@ -54,6 +55,8 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'django_htmx',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
