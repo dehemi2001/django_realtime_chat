@@ -11,3 +11,13 @@
     <div class="green-dot absolute top-2 right-2 z-20"></div>
     {% endif %}
 </div>
+
+<div id="online-icon-public-chat" class="{% if public_chat_users %}green-dot{% else %}graylight-dot{% endif %}"></div>
+
+{% for chat in user.chat_groups.all %}
+    {% if chat in private_chats_with_users or chat in group_chats_with_users %}
+    <div id="online-icon-{{ chat.group_name }}" class="green-dot"></div>
+    {% else %}
+    <div id="online-icon-{{ chat.group_name }}" class="graylight-dot"></div>
+    {% endif %}
+{% endfor %}
