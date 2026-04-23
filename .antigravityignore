@@ -1,0 +1,9 @@
+# .antigravityignore
+**/venv/
+**/node_modules/
+**/__pycache__/
+**/migrations/
+**/static/
+**/media/
+*.pyc
+.git/
