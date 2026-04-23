@@ -14,8 +14,8 @@ https://youtu.be/SQ4A7Q6_md8
 Download zip file<br> 
 or<br>
 run git clone command in empty folder
-```
-git clone https://github.com/andyjud/django-starter.git . && rm -rf .git
+```bash
+git clone https://github.com/dehemi2001/django_realtime_chat.git . && rm -rf .git
 ```
 <br><br>
 
