@@ -27,7 +27,11 @@ def chat_view(request, chatroom_name='public-chat'):
     
     if chat_group.groupchat_name:
         if request.user not in chat_group.members.all():
-            chat_group.members.add(request.user)
+            if request.user.emailaddress_set.filter(verified=True).exists():
+                chat_group.members.add(request.user)
+            else:
+                messages.warning(request, "You need to verify your email to join the chat!")
+                return redirect("profile-settings")
 
     if request.htmx:
         form = ChatmessageCreateForm(request.POST)
