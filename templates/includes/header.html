@@ -4,7 +4,7 @@
             <img class="h-6" src="/static/images/logo.svg" alt="Logo" />
             <span class="text-lg font-bold hidden sm:block">Real-time Chat</span>
         </a>
-        <div id="online-user-count"></div>
+        <div id="online-user-count" class="flex items-center"></div>
     </div>
     <nav class="block bg-gray-800 relative">
         <ul class="navitems flex items-center justify-center h-full">
@@ -58,9 +58,9 @@
             </li>
             <li x-data="{ dropdownOpen: false }" class="relative">
                 <a @click="dropdownOpen = !dropdownOpen" @click.away="dropdownOpen = false"
-                    class="cursor-pointer select-none">
+                    class="cursor-pointer select-none flex items-center gap-2">
                     <img class="h-8 w-8 rounded-full object-cover" src="{{ user.avatar }}" />
-                    {{ user.name }}
+                    <span class="max-w-[70px] md:max-w-[200px] truncate">{{ user.name }}</span>
                     <img x-bind:class="dropdownOpen && 'rotate-180 duration-300'" class="w-4"
                         src="https://img.icons8.com/small/32/777777/expand-arrow.png" />
                 </a>

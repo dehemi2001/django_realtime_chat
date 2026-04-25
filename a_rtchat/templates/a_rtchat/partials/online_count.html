@@ -25,7 +25,7 @@
 <div id="online-icon" class="gray-dot absolute top-2 left-2"></div>
 {% endif %}
 
-<ul id="groupchat-members" class="flex gap-4">
+<ul id="groupchat-members" class="flex gap-4 overflow-x-auto pb-2">
     {% for member in chat_group.members.all %}
     <li>
         <a href="{% url 'profile' member.username %}"
